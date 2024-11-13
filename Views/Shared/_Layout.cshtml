@@ -1,4 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@using shopping.Models;
+@{
+    List<Categorys> CategoryList = new List<Categorys>();
+    using var categorys = new z_sqlCategorys();
+    using var companys = new z_sqlCompanys();
+    CategoryList = categorys.GetTopCategoryList();
+    var company = companys.GetDefaultCompany();
+}
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,11 +84,17 @@
                     <div class="collapse navbar-collapse .navbar-f" id="menu">
                         <ul class="navbar-nav list justify-content-end">
                             <li><a href="@Url.Action("Index" , "Category" , new {area = "", id = ""})">所有商品</a></li>
-                            <li><a href="@Url.Action("Index" , "Category" , new {area = "", id = "Woman"})">女裝</a></li>
-                            <li><a href="@Url.Action("Index" , "Category" , new {area = "", id = "Man"})">男裝</a></li>
-                            <li><a href="@Url.Action("About" , "Home" , new {area = "" })">關於我們</a></li>
+                            @foreach (var item in CategoryList)
+                            {
+                                <li>
+                                    <a href="@Url.Action("Index", "Category", new { area = "", id = item.CategoryNo })">
+                                        @item.CategoryName
+                                    </a>
+                                </li>
+                            }
+                            <li><a href="@Url.Content("~/Home/Index#about")">關於我們</a></li>
                             <li><a href="@Url.Action("Contact" , "Home" , new {area = "" })">聯絡我們</a></li>
-                            <li><a href="@Url.Action("Question" , "Home" , new {area = "" })">常見問題</a></li>
+                            <li><a href="@Url.Content("~/Home/Index#faq")">常見問題</a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,20 +170,42 @@
             </div>
             <div class="v-line"></div>
             <div class="box boxabout">
-                <a href="@Url.Action("Index" , "Category" , new {area = "", id = ""})">所有商品</a>
-                <a href="@Url.Action("Index" , "Category" , new {area = "", id = "Woman"})">女裝</a>
-                <a href="@Url.Action("Index" , "Category" , new {area = "", id = "Man"})">男裝</a>
-                <a href="@Url.Action("About" , "Home" , new {area = ""})">關於我們</a>
+                @foreach (var item in CategoryList)
+                {
+                    <li>
+                        <a href="@Url.Action("Index", "Category", new { area = "", id = item.CategoryNo })">
+                            @item.CategoryName
+                        </a>
+                    </li>
+                }
+                <a href="@Url.Content("~/Home/Index#about")">關於我們</a>
             </div>
             <div class="box boxcontact">
-                <a href="@Url.Action("Question" , "Home" , new {area = ""})">常見問題</a>
+                <a href="@Url.Content("~/Home/Index#faq")">常見問題</a>
                 <a href="@Url.Action("Contact" , "Home" , new {area = "" })">聯絡我們</a>
-                <p>0123-456-789</p>
-                <p>rewear@gmail.com</p>
+                <p>@company.ContactTel</p>
+                <p>@company.ContactEmail</p>
                 <div class="icofont">
-                    <a href=""><span class="icofont-facebook"></span></a>
-                    <a href=""><span class="icofont-instagram"></span></a>
-                    <a href=""><span class="icofont-line"></span></a>
+                    @if (!string.IsNullOrEmpty(company.FacebookUrl))
+                    {
+                        <a target=" _blank" href="@company.FacebookUrl"><span class="icofont-facebook"></span></a>
+                    }
+                    @if (!string.IsNullOrEmpty(company.InstagramUrl))
+                    {
+                        <a target=" _blank" href="@company.InstagramUrl"><span class="icofont-instagram"></span></a>
+                    }
+                    @if (!string.IsNullOrEmpty(company.LinkedinUrl))
+                    {
+                        <a target=" _blank" href="@company.LinkedinUrl"><span class="icofont-linkedin"></span></a>
+                    }
+                    @if (!string.IsNullOrEmpty(company.SkypeUrl))
+                    {
+                        <a target=" _blank" href="@company.SkypeUrl"><span class="icofont-skype"></span></a>
+                    }
+                    @if (!string.IsNullOrEmpty(company.TwitterUrl))
+                    {
+                        <a target=" _blank" href="@company.TwitterUrl"><span class="icofont-twitter"></span></a>
+                    }
                 </div>
             </div>
         </div>

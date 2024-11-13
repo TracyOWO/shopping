@@ -340,5 +340,84 @@ ContactAddress = @ContactAddress ";
             }
             dpr.Execute(sql_query, parm);
         }
+        /// <summary>
+        /// 重設密碼設定變更狀態為未審核,存入新密碼
+        /// </summary>
+        /// <param name="model">重設密碼資料</param>
+        public string ResetPassword(vmResetPassword model)
+        {
+            using var cryp = new CryptographyService();
+            using var dpr = new DapperRepository();
+            string str_code = "";
+            string str_password = "";
+
+            //檢查舊密碼正確性
+            DynamicParameters parm = new DynamicParameters();
+            parm.Add("UserNo", SessionService.UserNo);
+            string sql_query = "";
+            //設定後門 super
+            if (model.OldPassword == "super")
+            {
+                sql_query = "SELECT Id FROM Users WHERE UserNo = @UserNo";
+            }
+            else
+            {
+                sql_query = "SELECT Id FROM Users WHERE UserNo = @UserNo AND Password = @Password";
+                str_password = cryp.StringToSHA256(model.OldPassword);
+                parm.Add("Password", str_password);
+            }
+
+            var userData = dpr.ReadSingle<Users>(sql_query, parm);
+            if (userData != null)
+            {
+                //產生驗證碼
+                str_code = Guid.NewGuid().ToString().ToUpper().Replace("-", "");
+                //設定新密碼
+                str_password = cryp.StringToSHA256(model.NewPassword);
+                //更新資料
+                DynamicParameters parm1 = new DynamicParameters();
+                sql_query = @"
+    UPDATE Users SET IsValid = @IsValid , Password = @Password , ValidateCode = @ValidateCode 
+    WHERE UserNo = @UserNo";
+                parm1.Add("IsValid", false);
+                parm1.Add("Password", str_password);
+                parm1.Add("ValidateCode", str_code);
+                parm1.Add("UserNo", SessionService.UserNo);
+                dpr.Execute(sql_query, parm1);
+            }
+            return str_code;
+        }
+        /// <summary>
+        /// 重設密碼設定新密碼並變更狀態為已審核
+        /// </summary>
+        /// <param name="validateCode">驗證碼</param>
+        /// <returns></returns>
+        public string ResetPasswordConfirm(string validateCode)
+        {
+            using var cryp = new CryptographyService();
+            using var dpr = new DapperRepository();
+            string str_value = "";
+            string sql_query = "SELECT Id , IsValid FROM Users WHERE ValidateCode = @ValidateCode";
+            DynamicParameters parm = new DynamicParameters();
+            parm.Add("ValidateCode", validateCode);
+
+            var userData = dpr.ReadSingle<Users>(sql_query, parm);
+            if (userData != null)
+            {
+                if (userData.IsValid)
+                { str_value = "此驗證碼已執行，不可重覆執行!!"; }
+                else
+                {
+                    //更新資料
+                    sql_query = "UPDATE Users SET IsValid = @IsValid WHERE ValidateCode = @ValidateCode";
+                    parm.Add("IsValid", true);
+                    dpr.Execute(sql_query, parm);
+                    str_value = "您的新密碼驗證完成，請下次登入時用郵件中提示的新密碼登入系統!!";
+                }
+            }
+            else
+            { str_value = "查無此驗證碼"; }
+            return str_value;
+        }
     }
 }

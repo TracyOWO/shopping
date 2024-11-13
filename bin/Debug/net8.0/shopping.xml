@@ -3862,6 +3862,20 @@
             <param name="model">使用者輸入的資料模型</param>
             <returns></returns>
         </member>
+        <member name="M:shopping.Models.z_sqlCategorys.SetCategoryName(System.String)">
+            <summary>
+            取得單筆資料(同步呼叫)
+            </summary>
+            <param name="categoryNo">分類代號</param>
+            <returns></returns>
+        </member>
+        <member name="M:shopping.Models.z_sqlCategorys.GetData(System.String)">
+            <summary>
+            取得單筆資料(同步呼叫)
+            </summary>
+            <param name="categoryNo">分類代號</param>
+            <returns></returns>
+        </member>
         <member name="M:shopping.Models.z_sqlUsers.CheckLogin(vmLogin)">
             <summary>
             檢查使用者登入是否正確
@@ -3929,6 +3943,19 @@
             </summary>
             <param name="model">我的帳號資料</param>
         </member>
+        <member name="M:shopping.Models.z_sqlUsers.ResetPassword(vmResetPassword)">
+            <summary>
+            重設密碼設定變更狀態為未審核,存入新密碼
+            </summary>
+            <param name="model">重設密碼資料</param>
+        </member>
+        <member name="M:shopping.Models.z_sqlUsers.ResetPasswordConfirm(System.String)">
+            <summary>
+            重設密碼設定新密碼並變更狀態為已審核
+            </summary>
+            <param name="validateCode">驗證碼</param>
+            <returns></returns>
+        </member>
         <member name="T:vmForget">
             <summary>
             忘記密碼用 ViewModel
@@ -3942,6 +3969,11 @@
         <member name="T:vmRegister">
             <summary>
             註冊用 ViewModel
+            </summary>
+        </member>
+        <member name="T:vmResetPassword">
+            <summary>
+            重設密碼用的 ViewModel
             </summary>
         </member>
     </members>

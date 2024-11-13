@@ -1,6 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    using var companys = new z_sqlCompanys();
+    var company = companys.GetDefaultCompany();
 }
+
 
 <!-- Banner -->
 <section class="banner">
@@ -41,28 +44,8 @@
 
 <!-- 關於我們 -->
 <section class="about" id="about">
-    <div class="about_main">
-        <div class="about_text">
-            <h2 style="font-family: Kalam">關於我們</h2>
-            <p>
-                二手衣拍賣網站的三大優點：環保、經濟和可持續性。透過本平台，可以減少衣物浪費，降低對環境的負擔，同時提供了便宜的購買選擇和賺錢機會。此外，它也能延長衣物的使用壽命，減少對新衣物的需求，推動可持續發展。
-            </p>
-        </div>
-        <div class="about_icon">
-            <div class="box">
-                <i class="fas fa-seedling fa-2x mb-2"></i>
-                <h5>環保</h5>
-            </div>
-            <div class="box">
-                <i class="fas fa-recycle fa-2x mb-2"></i>
-                <h5>可持續性</h5>
-            </div>
-            <div class="box">
-                <i class="fas fa-funnel-dollar fa-2x mb-2"></i>
-                <h5>經濟實惠</h5>
-            </div>
-        </div>
-    </div>
+    @Html.Raw(company.AboutusText)
+
 </section>
 
 <!-- 常見問題 -->

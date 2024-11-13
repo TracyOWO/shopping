@@ -17,5 +17,28 @@ namespace shopping.Controllers
                 .FirstOrDefault();
             return View(model);
         }
+        [HttpGet]
+        [Login()]
+        public ActionResult Edit()
+        {
+            SessionService.SetProgramInfo("", "我的帳號");
+            ActionService.SetActionName("修改個人資料");
+            using var user = new z_sqlUsers();
+            var model = user
+                .GetDataList()
+                .Where(m => m.UserNo == SessionService.UserNo)
+                .FirstOrDefault();
+            return View(model);
+        }
+
+        [HttpPost]
+        [Login()]
+        public ActionResult Edit(Users model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            using var user = new z_sqlUsers();
+            user.UpdateUserProfile(model);
+            return RedirectToAction("Index", "Profile", new { area = "" });
+        }
     }
 }

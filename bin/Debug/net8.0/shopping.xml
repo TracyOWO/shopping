@@ -3923,6 +3923,12 @@
             <param name="validateCode">驗證碼</param>
             <returns></returns>
         </member>
+        <member name="M:shopping.Models.z_sqlUsers.UpdateUserProfile(shopping.Models.Users)">
+            <summary>
+            更新使用者我的帳號資料
+            </summary>
+            <param name="model">我的帳號資料</param>
+        </member>
         <member name="T:vmForget">
             <summary>
             忘記密碼用 ViewModel

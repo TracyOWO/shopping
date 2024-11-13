@@ -36,13 +36,16 @@ public static class SessionService
     {
         get
         {
-            string str_value = "";
+            string str_value = "遊客";
             if (_context != null) str_value = _context.Session.Get<string>("UserName");
-            if (str_value == null) str_value = "";
+            if (string.IsNullOrEmpty(str_value)) str_value = "遊客";
             return str_value;
         }
         set
-        { _context?.Session.Set<string>("UserName", value); }
+        {
+            string str_user_name = (string.IsNullOrEmpty(value) ? "遊客" : value);
+            _context?.Session.Set<string>("UserName", str_user_name);
+        }
     }
     /// <summary>
     /// 登入使用者角色

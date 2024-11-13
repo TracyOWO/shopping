@@ -297,6 +297,7 @@ C:\vs2022\Project\shopping\obj\Debug\net8.0\shopping.MvcApplicationPartsAssembly
 C:\vs2022\Project\shopping\obj\Debug\net8.0\shopping.MvcApplicationPartsAssemblyInfo.cache
 C:\vs2022\Project\shopping\obj\Debug\net8.0\shopping.RazorAssemblyInfo.cache
 C:\vs2022\Project\shopping\obj\Debug\net8.0\shopping.RazorAssemblyInfo.cs
+C:\vs2022\Project\shopping\obj\Debug\net8.0\shopping.sourcelink.json
 C:\vs2022\Project\shopping\obj\Debug\net8.0\staticwebassets.build.json
 C:\vs2022\Project\shopping\obj\Debug\net8.0\staticwebassets.development.json
 C:\vs2022\Project\shopping\obj\Debug\net8.0\staticwebassets\msbuild.shopping.Microsoft.AspNetCore.StaticWebAssets.props

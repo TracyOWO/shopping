@@ -307,5 +307,38 @@ VALUES
             { str_value = "查無此驗證碼"; }
             return str_value;
         }
+        /// <summary>
+        /// 更新使用者我的帳號資料
+        /// </summary>
+        /// <param name="model">我的帳號資料</param>
+        public void UpdateUserProfile(Users model)
+        {
+            using var dpr = new DapperRepository();
+            string sql_query = @"
+UPDATE Users SET 
+GenderCode = @GenderCode , 
+ContactTel = @ContactTel , 
+ContactEmail = @ContactEmail,
+ContactAddress = @ContactAddress ";
+            if (SessionService.RoleNo != "Member")
+            {
+                sql_query += @", 
+    DeptNo = @DeptNo ,
+    TitleNo = @TitleNo ";
+            }
+            sql_query += "WHERE UserNo = @UserNo";
+            DynamicParameters parm = new DynamicParameters();
+            parm.Add("UserNo", model.UserNo);
+            parm.Add("GenderCode", model.GenderCode);
+            parm.Add("ContactTel", model.ContactTel);
+            parm.Add("ContactEmail", model.ContactEmail);
+            parm.Add("ContactAddress", model.ContactAddress);
+            if (SessionService.RoleNo != "Member")
+            {
+                parm.Add("DeptNo", model.DeptNo);
+                parm.Add("TitleNo", model.TitleNo);
+            }
+            dpr.Execute(sql_query, parm);
+        }
     }
 }

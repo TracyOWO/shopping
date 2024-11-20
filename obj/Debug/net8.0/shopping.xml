@@ -3876,6 +3876,37 @@
             <param name="categoryNo">分類代號</param>
             <returns></returns>
         </member>
+        <member name="M:shopping.Models.z_sqlProducts.GetData(System.String)">
+            <summary>
+            取得單筆資料(同步呼叫)
+            </summary>
+            <param name="prodNo">商品代號</param>
+            <returns></returns>
+        </member>
+        <member name="M:shopping.Models.z_sqlProducts.GetDataList(System.String,System.String)">
+            <summary>
+            取得多筆資料(同步呼叫)
+            </summary>
+            <param name="sortNo">排序方式</param>
+            <param name="searchString">模糊搜尋文字(空白或不傳入表示不搜尋)</param>
+            <returns></returns>
+        </member>
+        <member name="M:shopping.Models.z_sqlProducts.GetDataList(System.String,System.String,System.String)">
+            <summary>
+            取得多筆資料(同步呼叫)
+            </summary>
+            <param name="categoryNo">Category No</param>
+            <param name="sortNo">排序方式</param>
+            <param name="searchString">模糊搜尋文字(空白或不傳入表示不搜尋)</param>
+            <returns></returns>
+        </member>
+        <member name="M:shopping.Models.z_sqlProducts.GetCategoryDataList(System.String)">
+            <summary>
+            取得指定分類商品資料(同步呼叫)
+            </summary>
+            <param name="categoryNo">分類代號</param>
+            <returns></returns>
+        </member>
         <member name="M:shopping.Models.z_sqlUsers.CheckLogin(vmLogin)">
             <summary>
             檢查使用者登入是否正確

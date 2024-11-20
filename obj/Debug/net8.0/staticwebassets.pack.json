@@ -13,6 +13,254 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\categorys\\all.jpg",
+      "PackagePath": "staticwebassets\\images\\categorys\\all.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\categorys\\man.jpg",
+      "PackagePath": "staticwebassets\\images\\categorys\\man.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\categorys\\woman.jpg",
+      "PackagePath": "staticwebassets\\images\\categorys\\woman.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m01\\m01.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m01\\m01.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m01\\m0101.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m01\\m0101.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m01\\m0102.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m01\\m0102.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m01\\m0103.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m01\\m0103.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m01\\m0104.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m01\\m0104.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m02\\m02.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m02\\m02.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m02\\m0201.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m02\\m0201.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m02\\m0202.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m02\\m0202.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m02\\m0203.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m02\\m0203.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m02\\m0204.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m02\\m0204.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m03\\m03.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m03\\m03.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m03\\m0301.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m03\\m0301.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m03\\m0302.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m03\\m0302.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m03\\m0303.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m03\\m0303.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m03\\m0304.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m03\\m0304.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m04\\m04.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m04\\m04.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m04\\m0401.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m04\\m0401.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m04\\m0402.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m04\\m0402.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m04\\m0403.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m04\\m0403.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m04\\m0404.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m04\\m0404.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m05\\m05.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m05\\m05.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m05\\m0501.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m05\\m0501.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m05\\m0502.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m05\\m0502.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m05\\m0503.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m05\\m0503.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m06\\m06.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m06\\m06.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m06\\m0601.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m06\\m0601.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m06\\m0602.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m06\\m0602.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m06\\m0603.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m06\\m0603.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\m06\\m0604.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\m06\\m0604.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w01\\w01.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w01\\w01.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w01\\w0101.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w01\\w0101.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w01\\w0102.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w01\\w0102.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w01\\w0103.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w01\\w0103.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w01\\w0104.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w01\\w0104.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w02\\w02.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w02\\w02.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w02\\w0201.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w02\\w0201.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w02\\w0202.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w02\\w0202.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w02\\w0203.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w02\\w0203.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w02\\w0204.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w02\\w0204.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w03\\w03.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w03\\w03.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w03\\w0301.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w03\\w0301.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w03\\w0302.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w03\\w0302.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w03\\w0303.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w03\\w0303.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w03\\w0304.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w03\\w0304.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w04\\w04.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w04\\w04.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w04\\w0401.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w04\\w0401.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w04\\w0402.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w04\\w0402.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w04\\w0403.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w04\\w0403.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w04\\w0404.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w04\\w0404.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w05\\w05.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w05\\w05.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w05\\w0501.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w05\\w0501.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w05\\w0502.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w05\\w0502.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w05\\w0503.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w05\\w0503.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w05\\w0504.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w05\\w0504.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w06\\w06.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w06\\w06.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w06\\w0601.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w06\\w0601.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w06\\w0602.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w06\\w0602.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w06\\w0603.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w06\\w0603.jpg"
+    },
+    {
+      "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\products\\w06\\w0604.jpg",
+      "PackagePath": "staticwebassets\\images\\products\\w06\\w0604.jpg"
+    },
+    {
       "Id": "C:\\vs2022\\Project\\shopping\\wwwroot\\images\\users\\M001.jpg",
       "PackagePath": "staticwebassets\\images\\users\\M001.jpg"
     },

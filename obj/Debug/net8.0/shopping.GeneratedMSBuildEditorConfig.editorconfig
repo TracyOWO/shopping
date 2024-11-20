@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/vs2022/Project/shopping/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/vs2022/Project/shopping/Views/CodeGenerator/CreateArea.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29kZUdlbmVyYXRvclxDcmVhdGVBcmVhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

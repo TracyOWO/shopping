@@ -1,7 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
     using var companys = new z_sqlCompanys();
+    using var questions = new z_sqlQuestions();
     var company = companys.GetDefaultCompany();
+    var questionList = questions.GetDataList().Take(3);
+    string questionNo = "";
+    int questionId = 0;
 }
 
 
@@ -52,26 +56,21 @@
 <section class="faq" id="faq">
     <div class="faq_main">
         <h2 style="font-family: Kalam">常見問題</h2>
-        <p class="q1" data-bs-toggle="collapse" data-bs-target="#qa1">
-            1.是否有提供送貨到離島的服務？
-        </p>
-        <div class="qabox">
-            <p class="collapse a1" id="qa1">
-                因航運成本較高，本站提供免運費服務的範圍只限台灣本島。若送貨地點是在離島等地時，目前暫不提供寄送服務。
+        @foreach (var item in questionList)
+        {
+            questionId++;
+            questionNo = $"qa{questionId}";
+
+            <p class="q1" data-bs-toggle="collapse" data-bs-target="#@questionNo">
+                @item.QuestionText
             </p>
-        </div>
-        <p class="q1" data-bs-toggle="collapse" data-bs-target="#qa2">
-            2.最多試用幾天內才能退貨呢？
-        </p>
-        <p class="collapse a1" id="qa2">
-            依照消保法規定，消費者均享有商品到貨七天猶豫期之權益。但退回商品必須是全新狀態且完整包裝，否則恕不接受退貨。
-        </p>
-        <p class="q1" data-bs-toggle="collapse" data-bs-target="#qa3">
-            3.退貨時是否需要負擔運費？
-        </p>
-        <p class="collapse a1" id="qa3">
-            只要消費者是在七天的猶豫期或是保固期限之內退貨的話，其運費均由本站全額負責。
-        </p>
+            <div class="qabox">
+                <p class="collapse a1" id="@questionNo">
+                    @item.AnswerText
+
+                </p>
+            </div>
+        }
         <a href="@Url.Action("Question" , "Home" , new {area = ""})" class="btn btn-secondary mt-2 ms-2 btn-lg">
             更多常見問題 ...
         </a>

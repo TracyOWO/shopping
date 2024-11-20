@@ -1,0 +1,33 @@
+@model IEnumerable<shopping.Models.Questions>
+
+@{
+    ViewData["Title"] = "常見問題";
+}
+
+<!-- 常見問題 -->
+<section class="faq" id="faq">
+    <div class="faq_main">
+        <h2 style="font-family: Kalam">常見問題</h2>
+        @{
+            string questionNo = "";
+            int questionId = 0;
+            foreach (var item in Model)
+            {
+                questionId++;
+                questionNo = $"qa{questionId}";
+                <p class="q1" data-bs-toggle="collapse" data-bs-target="#@questionNo">
+                    @item.QuestionText
+                </p>
+                <p class="collapse a1" id="@questionNo">
+                    @item.AnswerText
+                </p>
+            }
+        }
+    </div>
+</section>
+
+@section Styles
+{
+    <!-- 依需要引用不同樣式表 -->
+    <link rel="stylesheet" href="@Url.Content("~/lib/RewearFrontend/css/style.css")" />
+}

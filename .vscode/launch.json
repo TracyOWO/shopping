@@ -7,7 +7,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/bin/Debug/net8.0/shopping.dll",
-      "args": ["urls=http://localhost:6060"],
+      "args": ["urls=https://localhost:6060"],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
       "serverReadyAction": {

@@ -4,17 +4,8 @@ using shopping.Models;
 
 namespace shopping.Controllers;
 
-[Area("Admin")]
 public class HomeController : Controller
 {
-
-    [HttpGet]
-    [Login(RoleList = "User,Mis,Member")]
-    public IActionResult Init()
-    {
-        SessionService.SetPrgInit();
-        return RedirectToAction("Index", ActionService.Controller, new { area = ActionService.Area });
-    }
 
     [HttpGet]
     public IActionResult Question()
@@ -60,7 +51,6 @@ public class HomeController : Controller
 
 
     [HttpGet]
-    [Login(RoleList = "User,Mis,Member")]
     public IActionResult Index()
     {
         SessionService.SetProgramInfo("", "儀表板", false, false, 0);

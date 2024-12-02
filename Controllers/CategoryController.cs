@@ -26,8 +26,8 @@ namespace shopping.Controllers
             SessionService.StringValue1 = id;
             if (id == "All" || category == null)
             {
-                SessionService.StringValue2 = "all";
-                SessionService.StringValue3 = "全站商品";
+                SessionService.StringValue2 = "all"; //父階程式
+                SessionService.StringValue3 = "全站商品";//父階程式
             }
             else if (string.IsNullOrEmpty(cateModel.ParentNo))
             {
@@ -42,6 +42,13 @@ namespace shopping.Controllers
                 SessionService.StringValue3 = cateModel1.CategoryName + " > " + SessionService.StringValue3;
             }
             return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult Sort(string id = "Product")
+        {
+            SessionService.SortNo = id;
+            return RedirectToAction("Index", new { id = SessionService.StringValue1 });
         }
 
     }

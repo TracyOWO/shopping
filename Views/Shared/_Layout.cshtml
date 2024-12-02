@@ -5,6 +5,8 @@
     using var companys = new z_sqlCompanys();
     CategoryList = categorys.GetTopCategoryList();
     var company = companys.GetDefaultCompany();
+    using var carts = new z_sqlCarts();
+    int int_count = carts.GetCartCount();
 }
 
 
@@ -109,7 +111,7 @@
             <div class="cart fr">
                 <a href="@Url.Action("Index" , "Cart" , new {area = ""})">
                     <span class="icofont-cart">
-                        <span ps-3>(0)</span>
+                        <span ps-3>(@int_count)</span>
                     </span>
                 </a>
             </div>
